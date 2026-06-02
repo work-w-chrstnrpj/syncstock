@@ -2,7 +2,7 @@ Here's a draft of the `README.md` file based on your project structure and featu
 
 ---
 
-# **StockSync - Inventory Management Application**
+# **SyncStock - Inventory Management Application**
 
 ### **Overview**
 StockSync is a robust and user-friendly inventory management application designed to streamline and simplify the tracking and management of inventory for businesses of all sizes. The app enables users to efficiently handle stock levels, monitor inventory movements, and generate insightful reports to support data-driven decision-making.
