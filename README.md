@@ -115,43 +115,55 @@ syncstock/
 
 ### **Setup Instructions**
 
-#### **Backend (Django)**
+The application has been fully containerized using Docker, making it incredibly easy to launch with a single click.
 
-1. **Navigate to the backend directory:**
-   ```
+#### **Quick Start (Using Docker)**
+**Prerequisites:** Ensure you have [Docker Desktop](https://www.docker.com/products/docker-desktop/) installed and running on your machine.
+
+1. **Start the Application:**
+   - **Windows:** Double-click the `start.bat` file in the root directory.
+   - **Mac/Linux:** Run `./start.sh` in your terminal.
+   
+   This will automatically build the images, spin up both the Django backend and React frontend, and open `http://localhost:3000` in your default browser.
+
+2. **Stop the Application:**
+   - **Windows:** Double-click the `stop.bat` file.
+   - **Mac/Linux:** Run `./stop.sh` in your terminal.
+   
+   This cleanly shuts down the environment.
+
+#### **Manual Setup (Without Docker)**
+
+**Backend (Django)**
+1. Navigate to the backend directory:
+   ```bash
    cd backend/
    ```
-
-2. **Install the required dependencies:**
-   ```
+2. Install the required dependencies:
+   ```bash
    pip install -r requirements.txt
    ```
-
-3. **Apply the migrations:**
-   ```
+3. Apply the migrations:
+   ```bash
    python manage.py migrate
    ```
-
-4. **Run the development server:**
+4. Run the development server:
+   ```bash
+   python manage.py runserver 0.0.0.0:8000
    ```
-   python manage.py runserver
-   ```
 
-#### **Frontend (React)**
-
-1. **Navigate to the frontend directory:**
-   ```
+**Frontend (React)**
+1. Navigate to the frontend directory:
+   ```bash
    cd frontend/
    ```
-
-2. **Install the required dependencies:**
-   ```
+2. Install the required dependencies:
+   ```bash
    npm install
    ```
-
-3. **Run the development server:**
-   ```
-   npm run dev
+3. Run the development server:
+   ```bash
+   npm run dev -- --port 3000
    ```
 
 ### **License**
